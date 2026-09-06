@@ -1,0 +1,71 @@
+#youtube-popout-button {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  color: #fff;
+  cursor: pointer;
+}
+
+#youtube-popout-button svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+#youtube-popout-button:hover {
+  color: #ff4d4d;
+}
+
+#youtube-popout-overlay {
+  position: fixed;
+  z-index: 2147483647;
+  right: 24px;
+  bottom: 24px;
+  width: min(640px, calc(100vw - 32px));
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 4px;
+  background: #000;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.55);
+}
+
+#youtube-popout-overlay .youtube-popout-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 30px;
+  padding: 0 8px 0 12px;
+  background: #181818;
+  color: #fff;
+  font: 12px Arial, sans-serif;
+}
+
+#youtube-popout-overlay .youtube-popout-bar button {
+  border: 0;
+  padding: 0 4px;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-size: 22px;
+  line-height: 1;
+}
+
+#youtube-popout-overlay .youtube-popout-bar button:hover {
+  color: #ff4d4d;
+}
+
+#youtube-popout-overlay video {
+  display: block !important;
+  position: relative !important;
+  inset: auto !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  aspect-ratio: 16 / 9 !important;
+  background: #000;
+  object-fit: contain !important;
+}
+

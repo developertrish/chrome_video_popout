@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Pop Out Player",
+  "version": "1.0.0",
+  "description": "Detach the current YouTube video into a focused pop-out window, like Opera's video pop out.",
+  "permissions": ["tabs"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Pop out YouTube video"
+  }
+}
